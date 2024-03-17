@@ -1,0 +1,13 @@
+#######################################################################
+# Voicechat Server Configuration File
+#######################################################################
+
+server.udp-listen-port=3724
+server.udp-listen-host=0.0.0.0
+
+server.tcp-listen-port=3725
+server.tcp-listen-host=0.0.0.0
+
+server.daemonize=0
+log.file=voice-server.log
+log.level=0
