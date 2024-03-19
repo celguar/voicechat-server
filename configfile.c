@@ -60,10 +60,10 @@ int configfile_load_config(const char * filename)
 		"server.tcp-listen-host",		SERVER_CONFIG_TYPE_STRING,	&g_serverConfig.tcp_listen_host,		0,		1,
 		"server.udp-listen-port",		SERVER_CONFIG_TYPE_INT,		&g_serverConfig.udp_listen_port,		0,		1,
 		"server.udp-listen-host",		SERVER_CONFIG_TYPE_STRING,	&g_serverConfig.udp_listen_host,		0,		1,
-		"server.daemonize",				SERVER_CONFIG_TYPE_INT,		&g_serverConfig.daemonize,				0,		0,
-		"log.file",						SERVER_CONFIG_TYPE_STRING,	&g_serverConfig.log_logfile,			0,		1,
-		"log.level",					SERVER_CONFIG_TYPE_INT,		&g_serverConfig.log_loglevel,			0,		1,
-		NULL,							0,							NULL,									0,		0,
+		"server.daemonize",			SERVER_CONFIG_TYPE_INT,		&g_serverConfig.daemonize,			0,		0,
+		"log.file",				SERVER_CONFIG_TYPE_STRING,	&g_serverConfig.log_logfile,			0,		1,
+		"log.level",				SERVER_CONFIG_TYPE_INT,		&g_serverConfig.log_loglevel,			0,		1,
+		NULL,					0,				NULL,						0,		0,
 	};
 
 	FILE * pConfigFile;
