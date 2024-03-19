@@ -394,18 +394,18 @@ void vc_handler_ping(ascent_socket *s, ascent_packet *p)
 // handler table
 typedef void(*vc_handler)(ascent_socket*,ascent_packet*);
 static vc_handler vc_handler_table[VOICECHAT_NUM_OPCODES] = {
-	NULL,											// 0
-	vc_handler_createchannel,						// VOICECHAT_CMSG_CREATE_CHANNEL
-	NULL,											// VOICECHAT_SMSG_CHANNEL_CREATED
-	vc_handler_addmember,							// VOICECHAT_CMSG_ADD_MEMBER
-	vc_handler_deletemember,						// VOICECHAT_CMSG_REMOVE_MEMBER
+	NULL,						// 0
+	vc_handler_createchannel,			// VOICECHAT_CMSG_CREATE_CHANNEL
+	NULL,						// VOICECHAT_SMSG_CHANNEL_CREATED
+	vc_handler_addmember,				// VOICECHAT_CMSG_ADD_MEMBER
+	vc_handler_deletemember,			// VOICECHAT_CMSG_REMOVE_MEMBER
 	vc_handler_voicemember,                         // VOICECHAT_CMSG_VOICE_MEMBER
 	vc_handler_devoicemember,                       // VOICECHAT_CMSG_DEVOICE_MEMBER
 	vc_handler_mutemember,                          // VOICECHAT_CMSG_MUTE_MEMBER
 	vc_handler_unmutemember,                        // VOICECHAT_CMSG_UNMUTE_MEMBER
-	vc_handler_deletechannel,						// VOICECHAT_CMSG_DELETE_CHANNEL
-	vc_handler_ping,								// VOICECHAT_CMSG_PING
-	NULL,											// VOICECHAT_SMSG_PONG
+	vc_handler_deletechannel,			// VOICECHAT_CMSG_DELETE_CHANNEL
+	vc_handler_ping,				// VOICECHAT_CMSG_PING
+	NULL,						// VOICECHAT_SMSG_PONG
 };
 
 // client reader
